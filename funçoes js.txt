@@ -1,0 +1,58 @@
+class Dado{
+    constructor(faces){
+        this.faces = faces;
+    }
+
+    Rolar(){
+        console.log(this.GetRandomInclusive(1,this.faces));
+        
+    }
+
+    GetRandomInclusive(min,max){
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+}
+
+var d6 = new Dado(6);
+var d61 = new Dado(61);
+
+d6.Rolar();
+d61.Rolar();
+
+
+Numeros Aleatorios sobre faces de um jogo de dado
+----------------------------------------------------------------------------------------------------------------------------------
+
+var sorteados = [];
+var valorMaximo = 60;
+
+function criarUnico() {
+    if (sorteados.length == valorMaximo) {
+        if (confirm('Já não há mais! Quer recomeçar?')) sorteados = [];
+        else return;
+    }
+    var sugestao = Math.ceil(Math.random() * valorMaximo); // Escolher um numero ao acaso
+    while (sorteados.indexOf(sugestao) >= 0) {  // Enquanto o numero já existir, escolher outro
+        sugestao = Math.ceil(Math.random() * valorMaximo);
+    }
+    sorteados.push(sugestao); // adicionar este numero à array de numeros sorteados para futura referência
+    return sugestao; // devolver o numero único
+}
+
+numeros aleatorios que não se repetem
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+
+token da api estudo
+
+ "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJjYXJsb3Ntb3RhODFAZ21haWwuY29tIiwiaWF0IjoxNjczNDQ5OTc2LCJleHAiOjE2NzM2MjI3NzZ9.06iEsJNDbVD_9K6c-iUPUpjaRyE8zi9CM8T3txFENAk"
+
+ou
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJjYXJsb3Ntb3RhODFAZ21haWwuY29tIiwiaWF0IjoxNjczNDczNTM3LCJleHAiOjE2NzM2NDYzMzd9.Z-SIji7ZjqwxXQY7Zcv7M55uN_LA4yDnAJKUO7Nm7c4
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

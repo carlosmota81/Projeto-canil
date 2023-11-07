@@ -1,0 +1,6 @@
+select * from telefoneuser as fone inner join userposjava as userp on fone.usuariopessoa = userp.id //iner join buscar todos
+
+
+
+select * from telefoneuser as fone inner join userposjava as userp on fone.usuariopessoa = userp.id where userp.id = 9  //buscar por id
+

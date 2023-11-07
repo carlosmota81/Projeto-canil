@@ -1,0 +1,30 @@
+{{>partials/header}}
+
+    {{#showOld}}
+
+        Olá tudo bem {{name}} , vc tem {{age}} anos?
+
+    {{/showOld}}
+
+    <br/>
+
+    <h2>Produtos</h2>
+    <ul>
+         {{#products}}
+            <li>{{title}} - R$ {{price}}</li>
+        {{/products}}
+    </ul>
+
+
+    <br/>
+
+    <h2>Produtos apartir de 15,00</h2>
+    <ul>
+         {{#expensives}}
+            <li>{{title}} - R$ {{price}}</li>
+        {{/expensives}}
+    </ul>
+
+
+    
+{{>partials/footer}}
